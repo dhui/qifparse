@@ -9,6 +9,8 @@ filename2 = os.path.join(os.path.dirname(__file__), 'transactions_only.qif')
 
 class TestQIFParsing(unittest.TestCase):
 
+    maxDiff = None
+
     def testParseFile(self):
         qif = QifParser.parse(open(filename))
         self.assertTrue(qif)
